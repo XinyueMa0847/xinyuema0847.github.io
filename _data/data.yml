@@ -83,14 +83,19 @@ publications:
     title: Publications
     intro: 
     papers:
-      - title: Cost-effective On-device Continual Learning over Memory Hierarchy with Miro
+      - title: "ORBITFLOW: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration"
         link: "#"
-        authors:  Xinyue Ma, Suyeon Jeong, Minjia Zhang, Di Wang, Jonghyun Choi, Myeongjae Jeon
-        conference: ACM MobiCom 2023[PDF](https://arxiv.org/pdf/2308.06053) [Slides](https://sigmobile.org/mobicom/2023/media/presentations/MaMiro.pdf)  [Code](https://github.com/omnia-unist/Miro) 
+        authors:  Xinyue Ma*, Heelim Hong*, Jongseob Lee, Seoyeong Choy, Woo-Yeon Lee, Taegeon Um, Myeongjae Jeon
+        conference: Under Review 
       - title: "REP: Resource-Efficient Prompting for Rehearsal-Free Continual Learning"
         link: "#"
         authors:  Sungho Jeon, Xinyue Ma, Kwang In Kim, Myeongjae Jeon
         conference: NeurIPS 2025[PDF](https://arxiv.org/abs/2406.04772) 
+      - title: Cost-effective On-device Continual Learning over Memory Hierarchy with Miro
+        link: "#"
+        authors:  Xinyue Ma, Suyeon Jeong, Minjia Zhang, Di Wang, Jonghyun Choi, Myeongjae Jeon
+        conference: ACM MobiCom 2023[PDF](https://arxiv.org/pdf/2308.06053) [Slides](https://sigmobile.org/mobicom/2023/media/presentations/MaMiro.pdf)  [Code](https://github.com/omnia-unist/Miro) 
+
 
 experiences:
     title: Experiences
