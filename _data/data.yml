@@ -87,10 +87,10 @@ publications:
         link: "#"
         authors:  Xinyue Ma, Suyeon Jeong, Minjia Zhang, Di Wang, Jonghyun Choi, Myeongjae Jeon
         conference: ACM MobiCom 2023[PDF](https://arxiv.org/pdf/2308.06053) [Slides](https://sigmobile.org/mobicom/2023/media/presentations/MaMiro.pdf)  [Code](https://github.com/omnia-unist/Miro) 
-      - title: "REP: Resource-Efficient Prompting for On-device Continual Learning"
+      - title: "REP: Resource-Efficient Prompting for Rehearsal-Free Continual Learning"
         link: "#"
         authors:  Sungho Jeon, Xinyue Ma, Kwang In Kim, Myeongjae Jeon
-        conference: arxiv Preprint 2024[PDF](https://arxiv.org/abs/2406.04772) 
+        conference: NeurIPS 2025[PDF](https://arxiv.org/abs/2406.04772) 
 
 experiences:
     title: Experiences
@@ -103,8 +103,13 @@ experiences:
         company: 2023.11 - 2024.2 
         time: Microsoft Research Asia
         details: 
+      - role: Teaching Assistant @ POSTECH	
+        company: 2024 - Present
+        time: POSTECH
+        details: |
+            - AI Systems (2025 Fall)
       - role: Teaching Assistant @ UNIST	
-        company: 2022 - Present
+        company: 2022 - 2024
         time: UNIST
         details: |
             - Computer Architecture (2023 Fall)
@@ -115,9 +120,8 @@ experiences:
 certifications:
       title: Research Interests
       list:
-        - name: Efficient Machine Learning
+        - name: Efficient Systems for LLMs
         - name: Continual Learning
-        - name: On-device Learning
 # projects:
 #     title: Projects
 #     intro: >
