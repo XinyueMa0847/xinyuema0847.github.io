@@ -1,20 +1,41 @@
 /* Extra small devices (phones, less than 768px) */
-@media (max-width: 767px) {
-  body {
+// @media (max-width: 767px) {
+@media (max-width: 991px) {
+    body {
     padding: 0;
   }
-
+  .avatar {
+    width: 50%; /* Adjust the width to your preference */
+    max-width: 150px; /* Maximum width (adjust as needed) */
+    margin-left: auto; /* Center the avatar */
+    margin-right: auto; /* Center the avatar */
+    margin-top: auto; /* Center the avatar */
+    margin-bottom: auto; /* Center the avatar */
+    border-radius: 50%; /* Make the avatar round */
+    display: block; /* Needed to enable margin auto to work for block level elements */
+  }
   .sidebar-wrapper {
     position: static;
+    width: 100%; 
     width: inherit;
   }
 
   .wrapper {
     display: block;
+    margin: 10 auto;
+    width: 100%;
+  }
+  .profile-container {
+    // padding: 10px;
+    // background: darken($theme-color, 10%);
+    background: rgba(0, 0, 0, 0.2);
+    width: 50%;
+    text-align: center;
+    color: #fff;
   }
 
   .main-wrapper {
-    padding: 30px;
+    padding: 10px;
   }
 
   .main-wrapper .time {
@@ -22,14 +43,22 @@
     display: block;
     margin-top: 5px;
   }
-
+  .main-wrapper .publication-title {
+    margin-left: 10px;
+    text-indent: -10px; /* Removes the margin-left from the first line */
+    padding-left: 10px; /* Applies left padding to all lines */
+  }
   .main-wrapper .upper-row {
     margin-bottom: 0;
   }
+  .section-title {
+    padding-top: 10px
+  }
 }
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-}
+// @media (min-width: 576px) {
+// // @media (min-width: 768px) {
+//   }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {

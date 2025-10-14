@@ -18,14 +18,33 @@
 
   {% for publication in publications.papers %}
   <div class="item">
-    {% if publication.link %}
-      <li><a href="{{ publication.link }}">{{ publication.title }}</a></li>
-    {% else %}
-      <li>{{ publication.title }}</li>
-    {% endif %}
-    <div class="publication-authors">{{ publication.authors }}</div>
-    <div class="publication-conference">{{ publication.conference }}</div>
+    <!-- <li><span style="font-size: 20px">{{ publication.title }}</span></li>
+     -->
+     <li  class="no-bullet"><span class="publication-title">{{ publication.title }}</span></li>
+
+    <div class="publication-authors">
+      &emsp;{% assign authors_list = publication.authors | split: ", " %}
+      {% for author in authors_list %}
+        {% if author == "Xinyue Ma" or author == "Xinyue Ma*" %}
+        <span style="font-weight: bold; text-decoration: underline; font-size: 20px">{{ author }}</span>
+        {% else %}
+        <span style="font-size: 20px">{{ author }}</span>
+        {% endif %}
+        {% unless forloop.last %}, {% endunless %}
+      {% endfor %}
+    </div>
+    <div class="publication-conference">
+      &emsp; {% assign pre_links_text = publication.conference | split: "[" | first %}
+      <span style="font-weight: bold; color: rgba(236, 0, 0, 0.993);font-size: 20px">{{ pre_links_text }}</span>,
+      {% assign links = publication.conference | remove: pre_links_text | split: "[" %}
+      {% for link in links %}
+        {% if link contains 'PDF' or link contains 'Slides' or link contains 'Code' %}
+          [<a href="{{ link | split: ']' | last | split: '(' | last | split: ')' | first }}"><span style="font-size: 20px">{{ link | split: ']' | first }}</span></a>]
+        {% endif %}
+      {% endfor %}
+    </div>
   </div><!--//item-->
+
   {% endfor %}
 
 </section><!--//section-->

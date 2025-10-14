@@ -10,9 +10,16 @@
     {{ career-profile.title }}
   </h2>
 
-  <div class="summary">
+  <div class="summary" >
     {{ career-profile.summary | markdownify }}
   </div><!--//summary-->
-    
 </section><!--//section-->
 {% endif %}
+<style>
+  .summary {
+    font-size: 18px;
+  }
+  .summary p {
+    padding-left: 2em;
+  }
+</style>
