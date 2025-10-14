@@ -34,7 +34,8 @@ sidebar:
     languages:
       title: Languages
       info:
-        - idiom: Chinese - Native
+        - idiom: Chinese
+          level: Native
 
         - idiom: English
           level: Professional - TOEFL 115/120
