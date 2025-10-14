@@ -9,8 +9,9 @@
   <ul class="list-unstyled interests-list">
     {% for language in languages.info %}
     <li>
-      {{ language.idiom }}
-      <span class="lang-desc">({{ language.level }})</span>
+      <span style="font-size: 18px">{{ language.idiom }}</span>
+      
+      <!-- <span class="lang-desc">({{ language.level }})</span> -->
     </li>
     {% endfor %}
   </ul>
