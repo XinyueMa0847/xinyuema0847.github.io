@@ -236,5 +236,10 @@ publications:
         conference: "Comm. ACM 4 (1961), 51–55"
 
 
+<<<<<<< HEAD
 footer: >
     Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>
+=======
+# footer: >
+#     Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>
+>>>>>>> a9c7f0cc042f82e7582a68997b996aadd3b1bb4e

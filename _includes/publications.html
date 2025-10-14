@@ -39,7 +39,9 @@
       {% assign links = publication.conference | remove: pre_links_text | split: "[" %}
       {% for link in links %}
         {% if link contains 'PDF' or link contains 'Slides' or link contains 'Code' %}
-          [<a href="{{ link | split: ']' | last | split: '(' | last | split: ')' | first }}"><span style="font-size: 20px">{{ link | split: ']' | first }}</span></a>]
+        <span style="font-size: 20px">[</span>
+        <a href="{{ link | split: ']' | last | split: '(' | last | split: ')' | first }}"><span style="font-size: 20px">{{link | split: ']' | first}}</span></a>
+        <span style="font-size: 20px">]</span>
         {% endif %}
       {% endfor %}
     </div>
