@@ -18,13 +18,15 @@
 
   {% for publication in publications.papers %}
   <div class="item">
-    <li><span style="font-size: 20px">{{ publication.title }}</span></li>
-    
+    <!-- <li><span style="font-size: 20px">{{ publication.title }}</span></li>
+     -->
+     <li  class="no-bullet"><span class="publication-title">{{ publication.title }}</span></li>
+
     <div class="publication-authors">
       &emsp;{% assign authors_list = publication.authors | split: ", " %}
       {% for author in authors_list %}
-        {% if author == "Xinyue Ma" %}
-        <span style="font-weight: bold; text-decoration: underline;font-size: 20px">{{ author }}</span>
+        {% if author == "Xinyue Ma" or author == "Xinyue Ma*" %}
+        <span style="font-weight: bold; text-decoration: underline; font-size: 20px">{{ author }}</span>
         {% else %}
         <span style="font-size: 20px">{{ author }}</span>
         {% endif %}

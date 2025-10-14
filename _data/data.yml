@@ -13,7 +13,7 @@ sidebar:
     avatar: xinyue_small.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
     # Sidebar links
-    email: xinyuema@unist.ac.kr
+    email: xinyuema@postech.ac.kr
     phone:
     timezone: 
     citizenship:
@@ -36,9 +36,11 @@ sidebar:
       info:
         - idiom: Chinese - Native
 
-        - idiom: English - Professional
+        - idiom: English
+          level: Professional - TOEFL 115/120
 
-        - idiom: Korean - Professional
+        - idiom: Korean
+          level: Professional - TOPIC Level 6
 
     # interests:
     #   title: Interests
@@ -57,17 +59,21 @@ career-profile:
   summary: |
     PhD Candidate<br>
     Advised by Professor [Myeongjae Jeon](https://sites.google.com/site/myeongjae/)<br>
-    Department of Computer Science Engineering<br>
-    [OMNIA](https://omnia.unist.ac.kr/) at UNIST [[CV](assets\XinyueMa_CV.pdf)]
+    Graduate School of Artificial Intelligence<br>
+    [OMNIA](https://omnia.unist.ac.kr/) at POSTECH [[CV](assets\XinyueMa_CV.pdf)]
     
-  notice: 
-     I am currently an research intern in [RiSE group @ Microsoft Research](https://www.microsoft.com/en-us/research/group/research-software-engineering-rise/), working on KV cache reuse for large language models. 
+  # I am currently an research intern in [RiSE group @ Microsoft Research](https://www.microsoft.com/en-us/research/group/research-software-engineering-rise/), working on KV cache reuse for large language models. 
+    
 education:
     title: Education
     info:
+      - degree: MS-PhD in Artifical Intelligence 
+        university: POSTECH, Korea
+        time: 2024 Fall - Present
+
       - degree: MS-PhD in Computer Science Eng.
         university: UNIST, Korea
-        time: 2022 - Present
+        time: 2022 Spring - 2024 Spring
 
       - degree: B.S. in Electrical Eng.
         university: KAIST, Korea
@@ -76,20 +82,38 @@ publications:
     title: Publications
     intro: 
     papers:
+      - title: "ORBITFLOW: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration"
+        link: "#"
+        authors:  Xinyue Ma*, Heelim Hong*, Jongseob Lee, Seoyeong Choy, Woo-Yeon Lee, Taegeon Um, Myeongjae Jeon
+        conference: Under Review 
+      - title: "REP: Resource-Efficient Prompting for Rehearsal-Free Continual Learning"
+        link: "#"
+        authors:  Sungho Jeon, Xinyue Ma, Kwang In Kim, Myeongjae Jeon
+        conference: NeurIPS 2025[PDF](https://arxiv.org/abs/2406.04772) 
       - title: Cost-effective On-device Continual Learning over Memory Hierarchy with Miro
         link: "#"
         authors:  Xinyue Ma, Suyeon Jeong, Minjia Zhang, Di Wang, Jonghyun Choi, Myeongjae Jeon
         conference: ACM MobiCom 2023[PDF](https://arxiv.org/pdf/2308.06053) [Slides](https://sigmobile.org/mobicom/2023/media/presentations/MaMiro.pdf)  [Code](https://github.com/omnia-unist/Miro) 
 
+
 experiences:
     title: Experiences
     info:
+      - role: Internship @ RiSE Group
+        company: 2024.9 - 2024.12
+        time: Microsoft Research Redmond
+        details: Effective KV Cache Reuse for Retreival-Augmented Generation
       - role: Internship @ Intelligent Cloud Edge Group
         company: 2023.11 - 2024.2 
         time: Microsoft Research Asia
         details: 
+      - role: Teaching Assistant @ POSTECH	
+        company: 2024 - Present
+        time: POSTECH
+        details: |
+            - AI Systems (2025 Fall)
       - role: Teaching Assistant @ UNIST	
-        company: 2022 - Present
+        company: 2022 - 2024
         time: UNIST
         details: |
             - Computer Architecture (2023 Fall)
@@ -100,9 +124,8 @@ experiences:
 certifications:
       title: Research Interests
       list:
-        - name: Efficient Machine Learning
+        - name: Efficient Systems for LLMs
         - name: Continual Learning
-        - name: On-device Learning
 # projects:
 #     title: Projects
 #     intro: >
@@ -159,5 +182,5 @@ oss:
 #         level: 0%
 
 
-# footer: >
-#     Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>
+footer: >
+    Based on design by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>

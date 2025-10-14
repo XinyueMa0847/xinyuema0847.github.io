@@ -33,12 +33,17 @@ p {
   line-height: 1.5;
 }
 
+.no-bullet {
+  list-style-type: none; /* Removes the bullet point */
+  margin: 0; /* Optional: Remove default margins */
+  padding: 0; /* Optional: Remove default padding */
+}
 .wrapper {
   display: grid;
-  grid-template-columns: 75% 1fr; //repeat(10, 1fr);
+  grid-template-columns: 80% 1fr; //repeat(10, 1fr);
   background: $theme-color;
-  max-width: 1500px;
-  width: 80%;
+  max-width: 2500px;
+  width: 100%;
   margin: 0 auto;
   position: relative;
   @include box-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
@@ -47,6 +52,7 @@ p {
 .sidebar-wrapper {
   // grid-column: span 3;
   width: 100%;
+  min-width: 300px; /* Maximum width (adjust as needed) */
   order: $sidebar-order;
   background: $theme-color;
   color: #fff;
@@ -81,7 +87,7 @@ p {
 
   .avatar {
     //used for profile image
-    width: 90%;
+    width: 70%;
     margin-top: 15px;
     margin-bottom: 15px;
     border: 0px solid #fff;
@@ -183,6 +189,7 @@ p {
     position: relative;
     margin-top: 0;
     margin-bottom: 20px;
+    padding-top: 10px
   }
   .section {
     margin-bottom: 60px;
@@ -192,6 +199,8 @@ p {
   .educations-section {
     .item {
       margin-bottom: 30px;
+      margin-left: 10px;
+
     }
   }
   .upper-row,
@@ -202,8 +211,7 @@ p {
     display: flex;
   }
   .job-title,
-  .degree,
-  .cert-title{
+  .degree{
     color: $text-color;
     font-size: 20px;
     margin-top: 0;
@@ -211,15 +219,29 @@ p {
     font-weight: 500;
     flex: 75%;
   }
+  .cert-title{
+    color: $text-color;
+    font-size: 20px;
+    margin-top: 0;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    flex: 75%;
+  }
   .time{
     font-size: 20px;
     text-decoration: underline;
-    color: $text-color
+    color: $text-color;
+    text-align: right; /* Aligns the text to the right */
+    white-space: nowrap; /* Prevents wrapping */
+    width: auto; /* Ensures no explicit width constraint */
+    // overflow: hidden; /* Hides any overflowing text if necessary */
   }
   .details{
     font-size: 18px;
     white-space: pre-line;
     margin-top: 3px;
+    margin-left: 10px;
     margin-bottom: 20px;
   }
   .cert-url {
@@ -233,6 +255,8 @@ p {
     font-size: 18px;
     color: $text-grey;
     margin-bottom: 10px;
+    margin-left: 10px;
+
 
   }
   .university,
@@ -245,6 +269,7 @@ p {
     font-size: 20px;
     font-weight: 400;
     margin-top: 0;
+    margin-left: 20px;
     margin-bottom: 5px;
     color: darken($theme-color, 15%);
   }
@@ -269,14 +294,26 @@ p {
     font-weight: 400;
     color: $text-color;
     margin-bottom: 1px;
-    margin-left: 16px;
-    list-style-type: none; /* Removes the bullet point */
+    margin-left: 10px;
+    text-indent: -10px; /* Removes the margin-left from the first line */
+    padding-left: 10px; /* Applies left padding to all lines */
+    // list-style-type: none; /* Removes the bullet point */
   }
   .publication-authors {
+    font-size: 16px;
     font-style: italic;
     // text-decoration: underline;
     color: $text-color;
+    margin-left: 20px;
+    text-indent: -20px; /* Removes the margin-left from the first line */
+    padding-left: 20px; /* Applies left padding to all lines */
     margin-bottom: 1px;
+  }
+  .publication-conference {
+    font-size: 16px;
+    margin-left: 20px;
+    text-indent: -20px; /* Removes the margin-left from the first line */
+    padding-left: 20px; /* Applies left padding to all lines */
   }
   .publications-section {
     .intro {
@@ -300,10 +337,12 @@ p {
   }
   .level-bar {
     height: 12px;
+    margin-left: 50px;
     background: $smoky-white;
   }
   .level-bar-inner {
     height: 12px;
+    margin-left: 50px;
     background: lighten($theme-color, 15%);
   }
 }
