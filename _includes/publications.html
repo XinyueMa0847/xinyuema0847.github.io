@@ -13,41 +13,58 @@
   {% if publications.intro %}
   <div class="intro">
     {{ publications.intro | markdownify }}
-  </div><!--//intro-->
+  </div>
   {% endif %}
 
   {% for publication in publications.papers %}
   <div class="item">
-    <!-- <li><span style="font-size: 20px">{{ publication.title }}</span></li>
-     -->
-     <li  class="no-bullet"><span class="publication-title">{{ publication.title }}</span></li>
+    <li class="no-bullet">
+      <!-- Title -->
+      <div class="publication-title">{{ publication.title }}</div>
 
-    <div class="publication-authors">
-      &emsp;{% assign authors_list = publication.authors | split: ", " %}
-      {% for author in authors_list %}
-        {% if author == "Xinyue Ma" or author == "Xinyue Ma*" %}
-        <span style="font-weight: bold; text-decoration: underline; font-size: 20px">{{ author }}</span>
-        {% else %}
-        <span style="font-size: 20px">{{ author }}</span>
-        {% endif %}
-        {% unless forloop.last %}, {% endunless %}
-      {% endfor %}
-    </div>
-    <div class="publication-conference">
-      &emsp; {% assign pre_links_text = publication.conference | split: "[" | first %}
-      <span style="font-weight: bold; color: rgba(236, 0, 0, 0.993);font-size: 20px">{{ pre_links_text }}</span>,
-      {% assign links = publication.conference | remove: pre_links_text | split: "[" %}
-      {% for link in links %}
-        {% if link contains 'PDF' or link contains 'Slides' or link contains 'Code' %}
-        <span style="font-size: 20px">[</span>
-        <a href="{{ link | split: ']' | last | split: '(' | last | split: ')' | first }}"><span style="font-size: 20px">{{link | split: ']' | first}}</span></a>
-        <span style="font-size: 20px">]</span>
-        {% endif %}
-      {% endfor %}
-    </div>
-  </div><!--//item-->
+      <!-- Authors (unchanged; your name bold+underline) -->
+      <div class="publication-authors">
+        {% assign authors_list = publication.authors | split: ", " %}
+        {% assign has_xm_star = false %}
+        {% for author in authors_list %}
+          {% assign author_trim = author | strip %}
+          {% if author_trim == "Xinyue Ma*" %}
+            {% assign has_xm_star = true %}
+          {% endif %}
 
+          {% if author_trim == "Xinyue Ma" or author_trim == "Xinyue Ma*" %}
+            <span class="me-author"><strong><u>{{ author }}</u></strong></span>
+          {% else %}
+            <span class="co-author">{{ author }}</span>
+          {% endif %}
+          {% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+      </div>
+
+      {% if has_xm_star %}
+      <!-- Footnote: aligned with authors via same hanging-indent geometry -->
+      <div class="publication-footnote"
+           style="margin-left:20px;text-indent:-20px;padding-left:20px;margin-top:2px;font-size:18px;color:#000000;">
+        <em>*Equal distribution</em>
+      </div>
+      {% endif %}
+
+      <!-- Venue + Links (venue in red) -->
+      <div class="publication-conference">
+        {% assign pre = publication.conference | split: "[" | first %}
+        <span class="venue" style="font-weight:bold;color:rgba(236,0,0,0.993);font-size:20px;">{{ pre }}</span>,
+        {% assign links = publication.conference | remove: pre | split: "[" %}
+        {% for link in links %}
+          {% assign text = link | split: ']' | first %}
+          {% assign url  = link | split: ']' | last | split: '(' | last | split: ')' | first %}
+          {% if text and url %}
+            [<a href="{{ url }}"><span style="font-size:20px">{{ text }}</span></a>]
+          {% endif %}
+        {% endfor %}
+      </div>
+    </li>
+  </div>
   {% endfor %}
 
-</section><!--//section-->
+</section>
 {% endif %}

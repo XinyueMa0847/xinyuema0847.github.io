@@ -15,7 +15,19 @@
     <div class="meta">
 
       <div class="upper-row">
-        <h3 class="job-title">{{ experience.role }}</h3>
+        <h3 class="job-title">
+          {% assign pre_links_text = experience.role | split: "[" | first | strip %}
+          {{ pre_links_text }}
+          {% assign links = experience.role | remove: pre_links_text | split: "[" %}
+          {% for link in links %}
+            {% assign link_text = link | split: ']' | first | strip %}
+            {% assign link_url  = link | split: ']' | last | split: '(' | last | split: ')' | first | strip %}
+            {% if link_text and link_url %}
+              {% if pre_links_text %} {% endif %}<a href="{{ link_url }}" target="_blank" rel="noopener">{{ link_text }}</a>
+            {% endif %}
+          {% endfor %}
+        </h3>
+        
         <div class="time">{{ experience.time }}</div>
       </div><!--//upper-row-->
 

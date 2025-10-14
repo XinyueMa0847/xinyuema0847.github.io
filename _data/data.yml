@@ -34,14 +34,11 @@ sidebar:
     languages:
       title: Languages
       info:
-        - idiom: Chinese
-          level: Native
+        - idiom: Chinese - Native
 
-        - idiom: English
-          level: Professional - TOEFL 115/120
+        - idiom: English - Professional (TOEFL 115/120)
 
-        - idiom: Korean
-          level: Professional - TOPIC Level 6
+        - idiom: Korean - Professional (TOPIC Level 6/6)
 
     # interests:
     #   title: Interests
@@ -100,11 +97,14 @@ publications:
 experiences:
     title: Experiences
     info:
-      - role: Internship @ RiSE Group
+      - role: Web Chair @ [SIGOPS APSys 2025](https://apsys2025.github.io/)
+        company: 2025.10.12 - 2024.10.13
+
+      - role: Internship @ [RiSE Group](https://www.microsoft.com/en-us/research/group/research-software-engineering-rise/)
         company: 2024.9 - 2024.12
         time: Microsoft Research Redmond
         details: Effective KV Cache Reuse for Retreival-Augmented Generation
-      - role: Internship @ Intelligent Cloud Edge Group
+      - role: Internship @ [Intelligent Cloud Edge Group](https://www.microsoft.com/en-us/research/group/intelligent-cloud-and-edge-group/)
         company: 2023.11 - 2024.2 
         time: Microsoft Research Asia
         details: 
@@ -112,7 +112,7 @@ experiences:
         company: 2024 - Present
         time: POSTECH
         details: |
-            - AI Systems (2025 Fall)
+            - [CSED703O] AI Systems (2025 Fall)
       - role: Teaching Assistant @ UNIST	
         company: 2022 - 2024
         time: UNIST
