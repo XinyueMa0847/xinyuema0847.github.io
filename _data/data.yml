@@ -83,7 +83,7 @@ publications:
       - title: "ORBITFLOW: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration"
         link: "#"
         authors:  Xinyue Ma*, Heelim Hong*, Jongseob Lee, Seoyeong Choy, Woo-Yeon Lee, Taegeon Um, Myeongjae Jeon
-        conference: Under Review 
+        conference: VLDB 2026[PDF]
       - title: "REP: Resource-Efficient Prompting for Rehearsal-Free Continual Learning"
         link: "#"
         authors:  Sungho Jeon, Xinyue Ma, Kwang In Kim, Myeongjae Jeon
@@ -112,7 +112,7 @@ experiences:
         company: 2024 - Present
         time: POSTECH
         details: |
-            - [CSED703O] AI Systems (2025 Fall)
+            - AI Systems (2025 Fall)
       - role: Teaching Assistant @ UNIST	
         company: 2022 - 2024
         time: UNIST
