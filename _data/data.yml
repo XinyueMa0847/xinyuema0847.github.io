@@ -53,7 +53,7 @@ sidebar:
     #       link:
 
 career-profile:
-  title: Xinyue Ma
+  title: Xinyue Ma | 马新悦
   summary: |
     PhD Candidate<br>
     Advised by Professor [Myeongjae Jeon](https://sites.google.com/site/myeongjae/)<br>
@@ -83,7 +83,7 @@ publications:
       - title: "ORBITFLOW: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration"
         link: "#"
         authors:  Xinyue Ma*, Heelim Hong*, Jongseob Lee, Seoyeong Choy, Woo-Yeon Lee, Taegeon Um, Myeongjae Jeon
-        conference: VLDB 2026[PDF]
+        conference: VLDB 2026[PDF]（https://www.vldb.org/pvldb/volumes/19/paper/ORBITFLOW%3A%20SLO-Aware%20Long-Context%20LLM%20Serving%20with%20Fine-Grained%20KV%20Cache%20Reconfiguration）
       - title: "REP: Resource-Efficient Prompting for Rehearsal-Free Continual Learning"
         link: "#"
         authors:  Sungho Jeon, Xinyue Ma, Kwang In Kim, Myeongjae Jeon
