@@ -41,7 +41,7 @@
     --fs-micro:   11px;                    /* eyebrows, dates, footer */
   
     /* ---- Layout ---- */
-    --maxw: 1100px;
+    --maxw: 1200px;
     --gutter: clamp(28px, 5vw, 64px);
   }
   
